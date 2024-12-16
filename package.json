@@ -1,33 +1,30 @@
 {
-  "name": "@daviddarnes/component-name",
-  "version": "1.0.0",
-  "description": "A Web Component for…",
-  "main": "component-name.js",
-  "scripts": {
-    "start": "npx http-server ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/daviddarnes/component-name.git"
-  },
-  "keywords": [
-    "web",
-    "component",
-    "components",
-    "web components",
-    "custom elements"
-  ],
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "bugs": {
-    "url": "https://github.com/daviddarnes/component-name/issues"
-  },
-  "author": {
-    "name": "David Darnes",
-    "email": "me@daviddarnes.com",
-    "url": "https://darn.es/"
-  },
-  "homepage": "https://github.com/daviddarnes/component-name#readme"
+	"name": "@ellyloel/share-block",
+	"version": "1.0.0",
+	"description": "A Web Component for adding a block of buttons and links for sharing.",
+	"main": "share-block.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ellyloel/share-block.git"
+	},
+	"keywords": [
+		"web",
+		"component",
+		"components",
+		"web components",
+		"custom elements"
+	],
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"bugs": {
+		"url": "https://github.com/ellyloel/share-block/issues"
+	},
+	"author": {
+		"name": "Elly Loel",
+		"email": "hello@ellyloel.com",
+		"url": "https://ellyloel.com/"
+	},
+	"homepage": "https://github.com/ellyloel/share-block#readme"
 }
