@@ -1,96 +1,87 @@
-# `component-name`
+# `share-block`
 
-A Web Component for…
+A Web Component for adding a block of buttons and links for sharing.
 
-**[Demo](https://daviddarnes.github.io/component-template/demo.html)** | **[Further reading](https://darn.es/web-component-github-starter-template/)**
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/~/github.com/daviddarnes/component-template?file=component-name.js&initialPath=/demo.html)
+**[Demo](https://ellyloel.github.io/share-block/demo.html)**
 
 ## Examples
 
 General usage example:
 
 ```html
-<script type="module" src="component-name.js"></script>
+<script type="module" src="share-block.js"></script>
 
-<component-name>
-  <button>Button</button>
-</component-name>
+<share-block>
+	<button type="button" data-type="share">Share</button>
+	<button type="button" data-type="copy">Copy link</button>
+	<button type="button" data-type="print">Print</button>
+	<a data-type="email">Email</a>
+</share-block>
 ```
 
-Example using a fallback method:
+## Example setting `mode`
+
+### `mode="split"` (default)
 
 ```html
-<script type="module" src="component-name.js"></script>
+<script type="module" src="share-block.js"></script>
 
-<component-name>
-  <button>Button</button>
-  <a href="#">Anchor</a>
-</component-name>
-<style>
-  component-name:not(:defined) button,
-  component-name:defined a {
-    display: none;
-  }
-</style>
+<share-block mode="combined">
+	<button type="button" data-type="share">Share</button>
+	<button type="button" data-type="copy">Copy link</button>
+</share-block>
 ```
 
-Example using options or additional fallback method:
+### `mode="combined"`
 
 ```html
-<script type="module" src="component-name.js"></script>
+<script type="module" src="share-block.js"></script>
 
-<component-name attribute="value">
-  <button>Button</button>
-</component-name>
-<style>
-  component-name[attribute="value"] {
-    outline: 1px solid red;
-  }
-</style>
+<share-block mode="combined">
+	<button type="button" data-type="share">Share</button>
+	<button type="button" data-type="copy">Copy link</button>
+</share-block>
+```
+
+## Example setting custom `url`, `title`, and `text`
+
+```html
+<script type="module" src="share-block.js"></script>
+
+<share-block url="example.com" title="Example title" text="This is some example text.">
+	<button type="button" data-type="share">Share</button>
+	<button type="button" data-type="copy">Copy link</button>
+	<button type="button" data-type="print">Print</button>
+	<a data-type="email">Email</a>
+</share-block>
 ```
 
 ## Features
 
-This Web Component allows you to:
+Supported `data-type`s:
 
-- Check for…
+- `share`
+- `copy`
+- `print`
+- `email`
+- `fediverse`
+- `mastodon`
+- `micro.blog`
+- `bluesky`
+- `tumblr`
+- `linkedin`
 
 ## Installation
 
 You have a few options (choose one of these):
 
-1. Install via [npm](https://www.npmjs.com/package/@daviddarnes/component-name): `npm install @daviddarnes/component-name`
-1. [Download the source manually from GitHub](https://github.com/daviddarnes/component-name/releases) into your project.
-1. Skip this step and use the script directly via a 3rd party CDN (not recommended for production use)
+1. [Download the source manually from GitHub](https://github.com/ellyloel/share-block/releases) into your project.
+1. 3rd party CDN (not recommended for production use)
 
 ### Usage
 
-Make sure you include the `<script>` in your project (choose one of these):
+Make sure you include the `<script>` in your project:
 
 ```html
-<!-- Host yourself -->
-<script type="module" src="component-name.js"></script>
+<script type="module" src="share-block.js"></script>
 ```
-
-```html
-<!-- 3rd party CDN, not recommended for production use -->
-<script
-  type="module"
-  src="https://www.unpkg.com/@daviddarnes/component-name@1.0.0/component-name.js"
-></script>
-```
-
-```html
-<!-- 3rd party CDN, not recommended for production use -->
-<script
-  type="module"
-  src="https://esm.sh/@daviddarnes/component-name@1.0.0"
-></script>
-```
-
-## Credit
-
-With thanks to the following people:
-
-- [Zach Leatherman](https://zachleat.com) for inspiring this [Web Component repo template](https://github.com/daviddarnes/component-template)
